@@ -1,0 +1,38 @@
+<div>
+  <table>
+    <tr>
+      <td>
+        Skill Name: <select (change)="onChange($event)">
+        <option *ngFor="let skill of skills" [value]="skill.skillId">{{skill.name}}</option>
+        </select>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <table>
+    <tr>
+      <td>
+        Version: <input type="text" name="version" value="{{skills.version}}">
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <table>
+    <tr>
+      <td>
+        Description: <input type="text" name="description" value="{{skills.description}}">
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <table>
+    <tr>
+      <td>
+        <input type="button" name="submit" value="Submit" style="background-color: cornflowerblue">
+      </td>
+    </tr>
+  </table>
+</div>

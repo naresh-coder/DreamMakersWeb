@@ -1,0 +1,123 @@
+<div>
+  <table>
+    <tr>
+      <td>
+        Employee Id: <input type="text" name="employeeId" value="{{employee.employeeId}}">
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <table>
+    <tr>
+      <td>
+        Employee Name: <input type="text" name="name" value="{{employee.name}}">
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <table>
+    <tr>
+      <td>
+        Email Id: <input type="text" name="emailId" value="{{employee.emailId}}">
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <table>
+    <tr>
+      <td>
+        Phone Number: <input type="text" name="phoneNumber" value="{{employee.phoneNumber}}">
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <table>
+    <tr>
+      <td>
+        Gender: <input type="text" name="gender" value="{{employee.gender}}">
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <table>
+    <tr>
+      <td>
+        Address1: <input type="text" name="address1" value="{{employee.address.address1}}">
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <table>
+    <tr>
+      <td>
+        Address2: <input type="text" name="address2" value="{{employee.address.address2}}">
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <table>
+    <tr>
+      <td>
+        Area: <input type="text" name="area" value="{{employee.address.area}}">
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <table>
+    <tr>
+      <td>
+        Gender: <input type="text" name="city" value="{{employee.address.city}}">
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <table>
+    <tr>
+      <td>
+        State: <input type="text" name="state" value="{{employee.address.state}}">
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <table>
+    <tr>
+      <td>
+        Country: <input type="text" name="country" value="{{employee.address.country}}">
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <table>
+    <tr>
+      <td>
+        Pincode: <input type="text" name="pincode" value="{{employee.address.pincode}}">
+      </td>
+    </tr>
+  </table>
+</div>
+<div *ngFor="let skillMatrix of employee.skillMatrixs">
+    <div class="title">{{skillMatrix.title}}</div>
+    <p>{{skillMatrix.text}}</p>
+</div>
+
+<div>
+  <table>
+    <tr>
+      <td>
+        <input type="button" name="submit" value="Submit" style="background-color: cornflowerblue"
+        onclick="newEmployee()">
+      </td>
+    </tr>
+  </table>
+</div>
