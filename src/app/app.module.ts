@@ -9,9 +9,9 @@ import { SkillsComponent } from './skills/skills.component';
 import {RouterModule, Routes} from '@angular/router';
 
 const routes: Routes = [
-  {path: 'employee', component: EmployeeComponent },
-  {path: 'skills', component: SkillsComponent }
-]
+  {path: 'employee', pathMatch: 'full', component: EmployeeComponent },
+  {path: 'skills', pathMatch: 'full', component: SkillsComponent }
+];
 
 const routing: ModuleWithProviders = RouterModule.forRoot(routes);
 
