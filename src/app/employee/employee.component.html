@@ -1,8 +1,12 @@
+<html>
 <div>
   <table>
     <tr>
       <td>
-        Employee Id: <input type="text" name="employeeId" value="{{employee.employeeId}}">
+        Employee Id: <input type="text" [(ngModel)]="employee.employeeId" ><p>{{employee.employeeId}}</p>
+      </td>
+      <td>
+        <input type="button" value="Search" (click)="searchEmployee()">
       </td>
     </tr>
   </table>
@@ -11,7 +15,7 @@
   <table>
     <tr>
       <td>
-        Employee Name: <input type="text" name="name" value="{{employee.name}}">
+        Employee Name: <input type="text" [(ngModel)]="employee.name" ><p>{{employee.name}}</p>
       </td>
     </tr>
   </table>
@@ -20,7 +24,13 @@
   <table>
     <tr>
       <td>
-        Email Id: <input type="text" name="emailId" value="{{employee.emailId}}">
+        Email Id: <input type="text" [(ngModel)]="employee.emailId" ><p>{{employee.emailId}}</p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div><table><tr><td>
+        Phone Number: <input type="text" [(ngModel)]="employee.phoneNumber" ><p>{{employee.phoneNumber}}</p>
       </td>
     </tr>
   </table>
@@ -29,7 +39,7 @@
   <table>
     <tr>
       <td>
-        Phone Number: <input type="text" name="phoneNumber" value="{{employee.phoneNumber}}">
+        Gender: <input type="text" [(ngModel)]="employee.gender" ><p>{{employee.gender}}</p>
       </td>
     </tr>
   </table>
@@ -38,7 +48,7 @@
   <table>
     <tr>
       <td>
-        Gender: <input type="text" name="gender" value="{{employee.gender}}">
+        Address1: <input type="text" [(ngModel)]="employee.address.address1" ><p>{{employee.address.address1}}</p>
       </td>
     </tr>
   </table>
@@ -47,7 +57,7 @@
   <table>
     <tr>
       <td>
-        Address1: <input type="text" name="address1" value="{{employee.address.address1}}">
+        Address2: <input type="text" [(ngModel)]="employee.address.address2" ><p>{{employee.address.address2}}</p>
       </td>
     </tr>
   </table>
@@ -56,7 +66,7 @@
   <table>
     <tr>
       <td>
-        Address2: <input type="text" name="address2" value="{{employee.address.address2}}">
+        Area: <input type="text" [(ngModel)]="employee.address.area" ><p>{{employee.address.area}}</p>
       </td>
     </tr>
   </table>
@@ -65,7 +75,7 @@
   <table>
     <tr>
       <td>
-        Area: <input type="text" name="area" value="{{employee.address.area}}">
+        City: <input type="text" [(ngModel)]="employee.address.city" ><p>{{employee.address.city}}</p>
       </td>
     </tr>
   </table>
@@ -74,7 +84,7 @@
   <table>
     <tr>
       <td>
-        Gender: <input type="text" name="city" value="{{employee.address.city}}">
+        State: <input type="text" [(ngModel)]="employee.address.state" ><p>{{employee.address.state}}</p>
       </td>
     </tr>
   </table>
@@ -83,7 +93,7 @@
   <table>
     <tr>
       <td>
-        State: <input type="text" name="state" value="{{employee.address.state}}">
+        Country: <input type="text" [(ngModel)]="employee.address.country" ><p>{{employee.address.country}}</p>
       </td>
     </tr>
   </table>
@@ -92,32 +102,24 @@
   <table>
     <tr>
       <td>
-        Country: <input type="text" name="country" value="{{employee.address.country}}">
+        Pincode: <input type="text" [(ngModel)]="employee.address.pincode" ><p>{{employee.address.pincode}}</p>
       </td>
     </tr>
   </table>
 </div>
-<div>
-  <table>
-    <tr>
-      <td>
-        Pincode: <input type="text" name="pincode" value="{{employee.address.pincode}}">
-      </td>
-    </tr>
-  </table>
-</div>
-<div *ngFor="let skillMatrix of employee.skillMatrixs">
+<!--<div *ngFor="let skillMatrix of employee.skillMatrixs">
     <div class="title">{{skillMatrix.title}}</div>
     <p>{{skillMatrix.text}}</p>
-</div>
+</div>-->
 
 <div>
   <table>
     <tr>
       <td>
         <input type="button" name="submit" value="Submit" style="background-color: cornflowerblue"
-        onclick="newEmployee()">
+               (click)="newEmployee()">
       </td>
     </tr>
   </table>
 </div>
+</html>
