@@ -1,10 +1,17 @@
+<div *ngFor="let skill of skills">
+  <div class="title">{{skill.title}}</div>
+  <p>{{skill.text}}</p>
+</div>
+
 <div>
   <table>
     <tr>
       <td>
-        Skill Name: <select (change)="onChange($event)">
+        Skill Name:
+        <!--<select (change)="onChange($event)">
         <option *ngFor="let skill of skills" [value]="skill.skillId">{{skill.name}}</option>
-        </select>
+        </select>-->
+        <input type="text" [(ngModel)]="skills.name" ><p>{{skills.name}}</p>
       </td>
     </tr>
   </table>
@@ -13,7 +20,7 @@
   <table>
     <tr>
       <td>
-        Version: <input type="text" name="version" value="{{skills.version}}">
+        Version: <input type="text" [(ngModel)]="skills.version" ><p>{{skills.version}}</p>
       </td>
     </tr>
   </table>
@@ -22,7 +29,7 @@
   <table>
     <tr>
       <td>
-        Description: <input type="text" name="description" value="{{skills.description}}">
+        Description: <input type="text" [(ngModel)]="skills.description" ><p>{{skills.description}}</p>
       </td>
     </tr>
   </table>
@@ -31,7 +38,7 @@
   <table>
     <tr>
       <td>
-        <input type="button" name="submit" value="Submit" style="background-color: cornflowerblue">
+        <input type="button" name="submit" value="Submit" (click)="newSkill()" style="background-color: cornflowerblue">
       </td>
     </tr>
   </table>
