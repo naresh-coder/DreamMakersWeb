@@ -1,41 +1,44 @@
-<div *ngFor="let skill of skills">
-  <div class="title">{{skill.title}}</div>
-  <p>{{skill.text}}</p>
-</div>
-
 <div>
+  <table border="1">
+    <tr>
+      <th>Skill Id</th>
+      <th>Skill Name</th>
+      <th>Version</th>
+      <th>Description</th>
+    </tr>
+    <tr *ngFor="let skill of skills">
+      <td>{{skill.skillId}}</td>
+      <td>{{skill.name}}</td>
+      <td>{{skill.version}}</td>
+      <td>{{skill.description}}</td>
+    </tr>
+  </table>
+</div>
+<br>
+<div class="container-fluid">
   <table>
     <tr>
       <td>
-        Skill Name:
+        <b>Skill Name:</b>
         <!--<select (change)="onChange($event)">
         <option *ngFor="let skill of skills" [value]="skill.skillId">{{skill.name}}</option>
         </select>-->
-        <input type="text" [(ngModel)]="skills.name" ><p>{{skills.name}}</p>
+        <input type="text" [(ngModel)]="skills.name" >
       </td>
     </tr>
-  </table>
-</div>
-<div>
-  <table>
+
     <tr>
       <td>
-        Version: <input type="text" [(ngModel)]="skills.version" ><p>{{skills.version}}</p>
+        <b>Version:</b> <input type="text" [(ngModel)]="skills.version" >
       </td>
     </tr>
-  </table>
-</div>
-<div>
-  <table>
+
     <tr>
       <td>
-        Description: <input type="text" [(ngModel)]="skills.description" ><p>{{skills.description}}</p>
+        <b>Description:</b> <input type="text" [(ngModel)]="skills.description" >
       </td>
     </tr>
-  </table>
-</div>
-<div>
-  <table>
+
     <tr>
       <td>
         <input type="button" name="submit" value="Submit" (click)="newSkill()" style="background-color: cornflowerblue">

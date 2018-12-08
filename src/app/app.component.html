@@ -1,13 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Home</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+    /* Set height of the grid so .sidenav can be 100% (adjust if needed) */
+    .row.content {height: 1500px}
 
-<nav>
-  <div class="nav nav-tabs blue lighten-2">
-    <ul class="left hide-on-med-and-down">
-    <li><a href="/employee" class="btn">Employee</a></li>
-    <li><a href="/skills" class="btn">Skills</a></li>
-    <li><a href="/serviceLines" class="btn">Service Lines</a></li>
-    <li><a href="/Practices" class="btn">Practices</a></li>
+    /* Set gray background color and 100% height */
+    .sidenav {
+      background-color: #f1f1f1;
+      height: 100%;
+    }
+
+    /* Set black background color, white text and some padding */
+    footer {
+      background-color: #555;
+      color: white;
+      padding: 15px;
+    }
+
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height: auto;}
+    }
+  </style>
+</head>
+<body>
+
+<div class="container-fluid">
+  <div class="row content">
+    <div class="col-sm-3 sidenav">
+      <h4>Enquero Skill Matrix</h4>
+      <ul class="nav nav-pills nav-stacked">
+        <li class="active"><a href="">Home</a></li>
+    <li class="active"><a href="/employee">Employee</a></li>
+    <li class="active"><a href="/skills">Skills</a></li>
+        <li class="active"><a href="/search">Reports</a></li>
+    <li class="active"><a href="/serviceLines">Service Lines</a></li>
+    <li class="active"><a href="/Practices">Practices</a></li>
     </ul>
 </div>
-</nav>
-<router-outlet></router-outlet>
+    <router-outlet></router-outlet>
+</div>
+</div>
+  <footer class="container-fluid">
+    <p>2018 enquero Inc.</p>
+  </footer>
+
+</body>
+</html>
 

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Http, Headers, RequestOptions } from '@angular/http';
+import { Http, Response, Headers, RequestOptions } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import {Employee} from './employee';
 import 'rxjs/add/operator/map';
@@ -10,6 +10,7 @@ export class EmployeeService {
 
   private url = 'http://172.16.4.89:8080/employee/1';
   private addUrl = 'http://localhost:8080/addEmployee';
+  employee: Employee;
 
   constructor(private http: Http) {
   }
@@ -19,6 +20,13 @@ export class EmployeeService {
     return this.http.get(this.url)
       .map(res => <Employee> res.json());
   }
+
+  /*getEmployee() {
+    this.http.get('http://172.16.4.89:8080/employee/1')
+      .map((data: Response) => {return data.json() as Employee;
+      }).toPromise().then(x => {this.employee = x;
+    });
+  }*/
 
   addEmployee (employee: Employee): Observable<Employee>  {
 

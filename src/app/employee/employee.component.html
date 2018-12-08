@@ -1,118 +1,127 @@
-<html>
-<div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Home</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body style="align-content: center">
+<div class="container-fluid">
   <table>
     <tr>
       <td>
-        Employee Id: <input type="text" [(ngModel)]="employee.employeeId" ><p>{{employee.employeeId}}</p>
+        <b>Employee Id:</b> <input type="text" [(ngModel)]="employee.employeeId" >
       </td>
       <td>
-        <input type="button" value="Search" (click)="searchEmployee()">
+        <input type="button" value="Search" style="background-color: cornflowerblue" (click)="searchEmployee()">
       </td>
     </tr>
-  </table>
-</div>
-<div>
-  <table>
-    <tr>
-      <td>
-        Employee Name: <input type="text" [(ngModel)]="employee.name" ><p>{{employee.name}}</p>
-      </td>
-    </tr>
-  </table>
-</div>
-<div>
-  <table>
-    <tr>
-      <td>
-        Email Id: <input type="text" [(ngModel)]="employee.emailId" ><p>{{employee.emailId}}</p>
-      </td>
-    </tr>
-  </table>
-</div>
-<div><table><tr><td>
-        Phone Number: <input type="text" [(ngModel)]="employee.phoneNumber" ><p>{{employee.phoneNumber}}</p>
-      </td>
-    </tr>
-  </table>
-</div>
-<div>
-  <table>
-    <tr>
-      <td>
-        Gender: <input type="text" [(ngModel)]="employee.gender" ><p>{{employee.gender}}</p>
-      </td>
-    </tr>
-  </table>
-</div>
-<div>
-  <table>
-    <tr>
-      <td>
-        Address1: <input type="text" [(ngModel)]="employee.address.address1" ><p>{{employee.address.address1}}</p>
-      </td>
-    </tr>
-  </table>
-</div>
-<div>
-  <table>
-    <tr>
-      <td>
-        Address2: <input type="text" [(ngModel)]="employee.address.address2" ><p>{{employee.address.address2}}</p>
-      </td>
-    </tr>
-  </table>
-</div>
-<div>
-  <table>
-    <tr>
-      <td>
-        Area: <input type="text" [(ngModel)]="employee.address.area" ><p>{{employee.address.area}}</p>
-      </td>
-    </tr>
-  </table>
-</div>
-<div>
-  <table>
-    <tr>
-      <td>
-        City: <input type="text" [(ngModel)]="employee.address.city" ><p>{{employee.address.city}}</p>
-      </td>
-    </tr>
-  </table>
-</div>
-<div>
-  <table>
-    <tr>
-      <td>
-        State: <input type="text" [(ngModel)]="employee.address.state" ><p>{{employee.address.state}}</p>
-      </td>
-    </tr>
-  </table>
-</div>
-<div>
-  <table>
-    <tr>
-      <td>
-        Country: <input type="text" [(ngModel)]="employee.address.country" ><p>{{employee.address.country}}</p>
-      </td>
-    </tr>
-  </table>
-</div>
-<div>
-  <table>
-    <tr>
-      <td>
-        Pincode: <input type="text" [(ngModel)]="employee.address.pincode" ><p>{{employee.address.pincode}}</p>
-      </td>
-    </tr>
-  </table>
-</div>
-<!--<div *ngFor="let skillMatrix of employee.skillMatrixs">
-    <div class="title">{{skillMatrix.title}}</div>
-    <p>{{skillMatrix.text}}</p>
-</div>-->
 
-<div>
+    <tr>
+      <td>
+        <b>Employee Name:</b> <input type="text" [(ngModel)]="employee.name" >
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <b>Email Id:</b> <input type="text" [(ngModel)]="employee.emailId" >
+      </td>
+    </tr>
+    <tr><td>
+      <b>Phone Number:</b> <input type="text" [(ngModel)]="employee.phoneNumber">
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <b>Gender:</b> <input type="text" [(ngModel)]="employee.gender">
+      </td>
+    </tr>
+
+      <tr>
+        <td>
+          <b>Approver Id:</b> <input type="text" [(ngModel)]="employee.approverId">
+        </td>
+      </tr>
+
+    <tr>
+      <td>
+        <b>Address1:</b> <input type="text" [(ngModel)]="employee.address.address1">
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <b>Address2:</b> <input type="text" [(ngModel)]="employee.address.address2">
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <b>Area:</b> <input type="text" [(ngModel)]="employee.address.area">
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <b>City:</b> <input type="text" [(ngModel)]="employee.address.city">
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <b>State:</b> <input type="text" [(ngModel)]="employee.address.state">
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <b>Country:</b> <input type="text" [(ngModel)]="employee.address.country">
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <b>Pincode:</b> <input type="text" [(ngModel)]="employee.address.pincode">
+      </td>
+    </tr>
+  </table>
+
+<br>
+
+  <table border="1">
+    <tr>
+      <th>Skill MatrixId</th>
+      <th>Skill Category</th>
+      <th>Skill Sub Category</th>
+      <th>Designation</th>
+      <th>Employee Id</th>
+      <th>Number of Years</th>
+      <th>Number of Months</th>
+      <th>Is Certified</th>
+      <th>Institution</th>
+      <th>Score</th>
+    </tr>
+    <tr *ngFor="let s of employee.skillMatrixs">
+
+    <td>{{s.skillMatrixId}}</td>
+    <td>{{s.skillCategory}}</td>
+    <td>{{s.skillSubCategory}}</td>
+    <td>{{s.designation}}</td>
+    <td>{{s.employeeId}}</td>
+    <td>{{s.numberofYears}}</td>
+    <td>{{s.numberofMonths}}</td>
+    <td>{{s.isCertified}}</td>
+    <td>{{s.nameofInstitute}}</td>
+    <td>{{s.score}}</td>
+</tr>
+  </table>
+
+<br>
   <table>
     <tr>
       <td>
@@ -122,4 +131,5 @@
     </tr>
   </table>
 </div>
+</body>
 </html>
