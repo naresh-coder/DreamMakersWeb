@@ -19,4 +19,12 @@ export class SkillsComponent implements OnInit {
       .subscribe(data => this.skills = data);
   }
 
+  newSkill() {
+    this.skillsService.addSkill(this.skills)
+      .subscribe(
+        skills => this.skills = skills
+      );
+    window.history.back();
+  }
+
 }
