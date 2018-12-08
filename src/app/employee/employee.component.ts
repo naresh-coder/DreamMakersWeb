@@ -18,10 +18,8 @@ export class EmployeeComponent implements OnInit {
     this.searchEmployee();
   }
   searchEmployee() {
-    alert(this.employee);
     this.employeeService.getEmployee()
       .subscribe(employee => this.employee = employee);
-    alert(this.employee);
   }
 
   newEmployee() {
