@@ -8,16 +8,16 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class EmployeeService {
 
-  private url = 'http://localhost:8080/getEmployee/';
+  private url = 'http://172.16.4.89:8080/employee/1';
   private addUrl = 'http://localhost:8080/addEmployee';
 
   constructor(private http: Http) {
   }
 
-  getEmployee(employeeId: number): Observable<Employee> {
-    this.url += employeeId;
+  getEmployee(): Observable<Employee> {
+    // this.url += employeeId;
     return this.http.get(this.url)
-      .map(res => res.json());
+      .map(res => <Employee> res.json());
   }
 
   addEmployee (employee: Employee): Observable<Employee>  {
